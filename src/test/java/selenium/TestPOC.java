@@ -4,6 +4,7 @@ import org.junit.AfterClass;
 import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.Wait;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -20,8 +21,8 @@ public class TestPOC {
 
     @Test
     public void testHibernateJSP() {
-        System.setProperty("webdriver.gecko.driver", "C:\\Apps\\geckodriver.exe");
-        driver = new FirefoxDriver();
+        System.setProperty("webdriver.chrome.driver", "C:\\Apps\\chromedriver.exe");
+        driver = new ChromeDriver();
         wait = new WebDriverWait(driver, 30);
         driver.get("http://localhost:8088/HibernateJSP");
 
