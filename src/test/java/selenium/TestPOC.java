@@ -38,22 +38,6 @@ public class TestPOC {
         assertTrue(true);
     }
 
-    @Test
-    public void testHibernateJSP2() {
-        System.setProperty("webdriver.chrome.driver", "C:\\Apps\\chromedriver.exe");
-        driver = new ChromeDriver();
-        wait = new WebDriverWait(driver, 30);
-        driver.get("http://localhost:8088/HibernateJSP");
-
-        try {
-            driver.findElement(By.xpath("//h3"));
-        }
-        catch (NoSuchElementException e) {
-            assertEquals(true,false);
-        }
-        assertTrue(true);
-    }
-
     @After
     public void killFirefox() {
         driver.quit();
